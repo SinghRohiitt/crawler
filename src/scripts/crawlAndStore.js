@@ -10,7 +10,7 @@ const SITEMAP_URL = "https://www.edzy.ai/sitemap.xml";
 
 // 🔹 connect DB
 await mongoose.connect(process.env.MONGO_URI);
-console.log("✅ DB connected");
+// console.log("✅ DB connected");
 
 // 🔹 fetch sitemap urls
 const fetchSitemapUrls = async () => {
@@ -103,7 +103,7 @@ const run = async () => {
   }
 
   await buildIncomingLinks();
-  console.log("🚀 Crawling completed");
+  // console.log("🚀 Crawling completed");
   process.exit();
 };
 

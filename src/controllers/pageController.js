@@ -8,7 +8,7 @@ export const getIncomingLinks = async (req, res) => {
   try {
     let { url } = req.body;
 
-    console.log("REQ URL 👉", url);
+    // console.log("REQ URL 👉", url);
 
     if (!url) {
       return res.status(400).json({ message: "url is required" });
@@ -28,7 +28,7 @@ export const getIncomingLinks = async (req, res) => {
     if (!page) {
       // 🔍 DEBUG HELP
       const allUrls = await Page.find({}, { url: 1, _id: 0 });
-      console.log("DB URLs 👉", allUrls);
+      // console.log("DB URLs 👉", allUrls);
 
       return res.status(404).json({
         message: "Page not found",
