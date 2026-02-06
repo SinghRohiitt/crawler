@@ -1,0 +1,46 @@
+{
+  "name": "crawler",
+  "type": "collection",
+  "version": "1",
+  "items": [
+    {
+      "name": "Get Incoming Links",
+      "type": "http-request",
+      "method": "POST",
+      "url": "http://localhost:5000/api/pages/incoming",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "mode": "json",
+        "json": "{\n  \"url\": \"https://www.edzy.ai\"\n}"
+      }
+    },
+    {
+      "name": "Get Outgoing Links",
+      "type": "http-request",
+      "method": "POST",
+      "url": "http://localhost:5000/api/pages/outgoing",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "mode": "json",
+        "json": "{\n  \"url\": \"https://www.edzy.ai\"\n}"
+      }
+    },
+    {
+      "name": "Get Top Linked Pages",
+      "type": "http-request",
+      "method": "POST",
+      "url": "http://localhost:5000/api/pages/top-linked",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "mode": "json",
+        "json": "{\n  \"n\": 5\n}"
+      }
+    }
+  ]
+}
