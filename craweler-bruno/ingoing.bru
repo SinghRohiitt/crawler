@@ -1,0 +1,22 @@
+meta {
+  name: ingoing
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5000/api/pages/incoming
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "url": "https://www.edzy.ai"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
