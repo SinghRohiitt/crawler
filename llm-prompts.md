@@ -3,7 +3,7 @@
 
 # ✅ `llm-prompts.md`
 
-```md
+```
 # LLM Prompts Used
 
 ## Prompt 1
